@@ -68,13 +68,13 @@ export default {
     line-height: 20px;
     height: 20px;
     vertical-align: middle;
-    // .i-switch__input {
-    //     position: absolute;
-    //     width: 0;
-    //     height: 0;
-    //     opacity: 0;
-    //     margin: 0;
-    // }
+    .i-switch__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        margin: 0;
+    }
     .i-switch__core {
         margin: 0;
         display: inline-block;
