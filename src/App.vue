@@ -140,6 +140,8 @@
             disabled
             show-password
         ></i-input>
+        <h1>Switch</h1>
+        <i-switch v-model="onOff" onColor="green" offColor="red" name="username"></i-switch>
     </div>
 </template>
 
@@ -149,7 +151,8 @@ export default {
         return {
             isShow: false,
             username: "",
-            password: ""
+            password: "",
+            onOff: false
         };
     },
     methods: {
