@@ -204,6 +204,9 @@ export default {
 
     //禁用  
     &.is-disabled {
+        background-color: #f5f7fa;
+        border-color: #e4e7ed;
+        color: #c0c4cc;
         cursor: not-allowed;
     }
 
