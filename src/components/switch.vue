@@ -6,7 +6,7 @@
         :offColor="offColor"
         :class="{ 'is-checked': value }"
     >
-        <!--作为表单元素，写入 input 是方便 form 通过 name 获取 value值-->
+        <!--作为表单元素，写入 input 是方便 form 通过 name 获取 checked 值-->
         <input
             type="checkbox"
             :name="name"
