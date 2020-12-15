@@ -1,6 +1,7 @@
 <template>
     <div id="app">
-        <!-- <div class="row">
+        <h1>Button</h1>
+        <div class="row">
             <i-button>按钮</i-button>
             <i-button type="primary" @click="tiktok(5)">按钮</i-button>
             <i-button type="success">按钮</i-button>
@@ -87,23 +88,58 @@
                 icon="icon-al-icon-close-round"
                 type="danger"
             ></i-button>
-        </div> -->
-        <!-- <i-dialog>
+        </div>
+        <h1>Dialog</h1>
+        <i-dialog>
             <template v-slot:title>
                 <h3>提示</h3>
             </template>
-        </i-dialog> -->
-        <i-button type="primary" @click="isShow = true">控制</i-button>
+        </i-dialog>
+        <i-button type="primary" @click="isShow = true">弹窗</i-button>
         <i-dialog title="提示" :visible.sync="isShow" width="40%" top="40px">
             <!-- <template>
-                <h3>这是什么</h3>
+                <h1>这里是插槽信息</h1>
             </template> -->
-            这是一段信息~
+            这是一段普通的默认信息~
             <template v-slot:footer>
                 <i-button @click="isShow = false">取消</i-button>
                 <i-button type="primary" @click="isShow = false">确定</i-button>
             </template>
         </i-dialog>
+        <h1>Input</h1>
+        <i-input
+            class="i-input"
+            placeholder="请输入用户名"
+            name="username"
+            v-model="username"
+            clearable
+        ></i-input>
+        <br />
+        <i-input
+            class="i-input"
+            type="password"
+            placeholder="请输入密码"
+            v-model="password"
+            show-password
+        ></i-input
+        ><br />
+        <i-input
+            class="i-input"
+            placeholder="请输入用户名"
+            name="username"
+            v-model="username"
+            disabled
+            clearable
+        ></i-input>
+        <br />
+        <i-input
+            class="i-input"
+            type="password"
+            placeholder="请输入密码"
+            v-model="password"
+            disabled
+            show-password
+        ></i-input>
     </div>
 </template>
 
@@ -111,8 +147,10 @@
 export default {
     data() {
         return {
-            isShow: false
-        }
+            isShow: false,
+            username: "",
+            password: ""
+        };
     },
     methods: {
         tiktok(params) {
@@ -123,7 +161,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.row > button {
+#app {
     margin: 10px;
+    h1 {
+        margin: 20px 0;
+    }
+    .row > button {
+        margin: 10px;
+    }
+    .i-input {
+        width: 200px;
+    }
 }
 </style>
