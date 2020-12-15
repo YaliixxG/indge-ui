@@ -141,6 +141,7 @@
             show-password
         ></i-input>
         <h1>Switch</h1>
+        <i-switch v-model="onOff" name="username"></i-switch>
         <i-switch v-model="onOff" onColor="green" offColor="red" name="username"></i-switch>
     </div>
 </template>
