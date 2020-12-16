@@ -143,6 +143,11 @@
         <h1>Switch</h1>
         <i-switch v-model="onOff" name="username"></i-switch>
         <i-switch v-model="onOff" onColor="green" offColor="red" name="username"></i-switch>
+        <h1>Radio</h1>
+        <i-radio label="1" v-model="radio">备选项一</i-radio>
+        <i-radio label="2" v-model="radio">备选项二</i-radio>
+         <i-radio label="1" v-model="radio"></i-radio>
+        <i-radio label="2" v-model="radio"></i-radio>
     </div>
 </template>
 
@@ -153,7 +158,8 @@ export default {
             isShow: false,
             username: "",
             password: "",
-            onOff: false
+            onOff: false,
+            radio: 'xx'
         };
     },
     methods: {
