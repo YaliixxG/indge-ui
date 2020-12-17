@@ -1,5 +1,12 @@
 <template>
-    <label class="i-radio" :class="{ 'is-checked': label === model }">
+    <label
+        class="i-radio"
+        :class="{
+            'is-checked': haveRadioGroup
+                ? label === RadioGroup.value
+                : label === model
+        }"
+    >
         <span class="i-radio__input">
             <span class="i-radio__inner"></span>
             <input
@@ -40,15 +47,27 @@ export default {
             default: ""
         }
     },
+    inject: {
+        RadioGroup: { default: "" }
+    },
     computed: {
         model: {
             get() {
-                return this.value;
+                return !this.haveRadioGroup
+                    ? this.value
+                    : this.RadioGroup.value;
             },
             set(value) {
-                this.$emit("input", value);
-                this.$refs.radio.checked = this.model === this.label;
+                this.haveRadioGroup
+                    ? this.RadioGroup.$emit("input", value)
+                    : this.$emit("input", value);
+                this.$refs.radio.checked = this.haveRadioGroup
+                    ? this.RadioGroup === this.label
+                    : this.model.value === this.label;
             }
+        },
+        haveRadioGroup() {
+            return !!this.RadioGroup;
         }
     }
 };
@@ -127,15 +146,14 @@ export default {
     //     }
     // }
     &.is-checked {
-    .i-radio__input .i-radio__inner {
-        border-color: #409eff;
-        background: #409eff;
-        &:after {
-            transform: translate(-50%, -50%) scale(1);
+        .i-radio__input .i-radio__inner {
+            border-color: #409eff;
+            background: #409eff;
+            &:after {
+                transform: translate(-50%, -50%) scale(1);
+            }
         }
     }
 }
-}
-
 </style>
 

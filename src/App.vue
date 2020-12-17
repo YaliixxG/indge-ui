@@ -146,8 +146,13 @@
         <h1>Radio</h1>
         <i-radio label="1" v-model="radio">备选项一</i-radio>
         <i-radio label="2" v-model="radio">备选项二</i-radio>
-         <i-radio label="1" v-model="radio"></i-radio>
+        <i-radio label="1" v-model="radio"></i-radio>
         <i-radio label="2" v-model="radio"></i-radio>
+        <h1>RadioGroup</h1>
+        <i-radio-group v-model="gender">
+        <i-radio label="m">男</i-radio>
+        <i-radio label="f">女</i-radio>
+        </i-radio-group>
     </div>
 </template>
 
@@ -159,7 +164,8 @@ export default {
             username: "",
             password: "",
             onOff: false,
-            radio: 'xx'
+            radio: '1',
+            gender: 'm'
         };
     },
     methods: {
