@@ -38,10 +38,6 @@ export default {
             type: String,
             default: ""
         },
-        disabled: {
-            type: Boolean,
-            default: false
-        },
         value: {
             type: [String, Number, Boolean],
             default: ""
@@ -134,17 +130,6 @@ export default {
         font-size: 14px;
         padding-left: 10px;
     }
-    // &.is-disabled {
-    //     .i-radio__inner {
-    //         background-color: #f5f7fa;
-    //         border-color: #e4e7ed;
-    //         color: #c0c4cc;
-    //         cursor: not-allowed;
-    //         &:after {
-    //             transform: translate(-50%,-50%) scale(1);
-    //         }
-    //     }
-    // }
     &.is-checked {
         .i-radio__input .i-radio__inner {
             border-color: #409eff;
@@ -152,6 +137,9 @@ export default {
             &:after {
                 transform: translate(-50%, -50%) scale(1);
             }
+        }
+        .i-radio__label {
+            color: #409eff;
         }
     }
 }
