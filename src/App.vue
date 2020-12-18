@@ -146,13 +146,20 @@
         <h1>Radio</h1>
         <i-radio label="1" v-model="radio">备选项一</i-radio>
         <i-radio label="2" v-model="radio">备选项二</i-radio>
-        <i-radio label="1" v-model="radio"></i-radio>
-        <i-radio label="2" v-model="radio"></i-radio>
         <h1>RadioGroup</h1>
         <i-radio-group v-model="gender">
         <i-radio label="m">男</i-radio>
         <i-radio label="f">女</i-radio>
         </i-radio-group>
+        <h1>Checkbox</h1>
+        <i-checkbox v-model="agreen">同意《授权委托书》</i-checkbox>
+        <i-checkbox v-model="agreen" label="Yes"></i-checkbox>
+        <h1>ICheckboxGroup</h1>
+        <i-checkbox-group v-model="fruits">
+            <i-checkbox label="苹果" disabled></i-checkbox>
+            <i-checkbox label="荔枝"></i-checkbox>
+            <i-checkbox label="橘子"></i-checkbox>
+        </i-checkbox-group>
     </div>
 </template>
 
@@ -165,7 +172,9 @@ export default {
             password: "",
             onOff: false,
             radio: '1',
-            gender: 'm'
+            gender: 'm',
+            agreen: true,
+            fruits: ['苹果']
         };
     },
     methods: {
