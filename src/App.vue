@@ -142,14 +142,19 @@
         ></i-input>
         <h1>Switch</h1>
         <i-switch v-model="onOff" name="username"></i-switch>
-        <i-switch v-model="onOff" onColor="green" offColor="red" name="username"></i-switch>
+        <i-switch
+            v-model="onOff"
+            onColor="green"
+            offColor="red"
+            name="username"
+        ></i-switch>
         <h1>Radio</h1>
         <i-radio label="1" v-model="radio">备选项一</i-radio>
         <i-radio label="2" v-model="radio">备选项二</i-radio>
         <h1>RadioGroup</h1>
         <i-radio-group v-model="gender">
-        <i-radio label="m">男</i-radio>
-        <i-radio label="f">女</i-radio>
+            <i-radio label="m">男</i-radio>
+            <i-radio label="f">女</i-radio>
         </i-radio-group>
         <h1>Checkbox</h1>
         <i-checkbox v-model="agreen">同意《授权委托书》</i-checkbox>
@@ -160,6 +165,27 @@
             <i-checkbox label="荔枝"></i-checkbox>
             <i-checkbox label="橘子"></i-checkbox>
         </i-checkbox-group>
+        <h1>IForm</h1>
+        <i-form :model="model" label-width="200px">
+            <i-form-item label="用户名">
+                <i-input
+                    class="i-input"
+                    placeholder="请输入用户名"
+                    name="username"
+                    v-model="model.username"
+                    clearable
+                ></i-input>
+            </i-form-item>
+            <i-form-item label="密码">
+                <i-input
+                    class="i-input"
+                    type="password"
+                    placeholder="请输入密码"
+                    name="username"
+                    v-model="model.password"
+                ></i-input>
+            </i-form-item>
+        </i-form>
     </div>
 </template>
 
@@ -171,10 +197,14 @@ export default {
             username: "",
             password: "",
             onOff: false,
-            radio: '1',
-            gender: 'm',
+            radio: "1",
+            gender: "m",
             agreen: true,
-            fruits: ['苹果']
+            fruits: ["苹果"],
+            model: {
+                username: "",
+                password: ""
+            }
         };
     },
     methods: {
