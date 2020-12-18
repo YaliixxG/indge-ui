@@ -12,9 +12,6 @@ export default {
             default: ''
         }
     },
-    mounted() {
-        console.log('this', this.value)
-    },
     provide() {
         return {
             RadioGroup: this
