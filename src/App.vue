@@ -159,13 +159,13 @@
         <h1>Checkbox</h1>
         <i-checkbox v-model="agreen">同意《授权委托书》</i-checkbox>
         <i-checkbox v-model="agreen" label="Yes"></i-checkbox>
-        <h1>ICheckboxGroup</h1>
+        <h1>CheckboxGroup</h1>
         <i-checkbox-group v-model="fruits">
             <i-checkbox label="苹果" disabled></i-checkbox>
             <i-checkbox label="荔枝"></i-checkbox>
             <i-checkbox label="橘子"></i-checkbox>
         </i-checkbox-group>
-        <h1>IForm</h1>
+        <h1>Form</h1>
         <i-form :model="model" label-width="200px">
             <i-form-item label="用户名">
                 <i-input
