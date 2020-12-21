@@ -1,24 +1,13 @@
-# indge-ui
+## 介绍
 
-## Project setup
-```
-npm install
-```
+基于  Vue 的简易 UI 组件库
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+## 安装
+
+```js
+npm i indge-ui
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## 使用示例
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+暂无，可见 examples 文件夹
